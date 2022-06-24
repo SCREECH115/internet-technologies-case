@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LAB 3 ZADANIE 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Gaming Studio Development</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">O mnie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Zarejestruj się</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="JS3.html">Zadanie JavaScript 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="JS2.html">Zadanie JavaScript 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="JS1.html">Zadanie JavaScript 3</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <form action="" method="post">
+        <input type="text" name="number1" id="number1" placeholder="A"><p></p>
+        <input type="text" name="number2" id="number2" placeholder="B"><p></p>
+        <input type="text" name="number3" id="number3" placeholder="C"><p></p>
+        <input type="submit" value="Rozwiąż równanie" onclick="solution()"><p></p>
+    
+        <hr>
+        Uwaga:<br>
+        Gdy wyskoczy nam NaN to oznacza, że wyszła ujemna delta.
+    </form>
+
+    <script>
+        function solution(){
+        
+            var number1 = document.getElementById("number1").value;
+            var number2 = document.getElementById("number2").value;
+            var number3 = document.getElementById("number3").value;
+            
+        
+            var x = (number2*number2)-(4*number1*number3);
+            var y = Math.sqrt(x);
+            var z = (-number2+y)/(2*number1);
+            var w = (-number2-y)/(2*number1);
+        
+            document.write("x1 = " + z + "<p></p>");
+            document.write("x2 = " + w + "<p></p>");
+        }
+        
+        </script>
+
+    
+<div class="stopka">
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Skontaktuj się ze mną pod numerem telefonu:
+      <br>(+12) 345-678-9012
+    </button>
+    <button type="button" class="btn btn-primary btn-lg btn-block">Napisz do mnie e-mail:<br>
+    mailto@example.com</button>
+  </div>
+<div class="fixed-bottom">
+    <address>
+        Written by <a href="mailto:arekw99@gmail.com">Arkadiusz Woźniak</a><br>
+        Album number: 18048
+    </address>
+</div>
+
+<h1 class="discover">We like to<span class="badge badge-secondary">discover</span></h1>
+
+</body>
+</html>
